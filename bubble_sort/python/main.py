@@ -1,8 +1,20 @@
-import time
+import timeit
 import random
 
-size = 1000
-numbers = [random.randint(0, 10000) for _ in range(size)]
+LIST_SIZE = 1000
+ITERATIONS = 10
+
+def main():
+    print("This is a bubble_sort")
+
+    unsorted_list = [random.randint(0, 10000) for _ in range(LIST_SIZE)]
+
+    print(f"Before Sorting: {unsorted_list[0:10]} ... {unsorted_list[-10:]},  list size: {LIST_SIZE}")
+    sorted_list = bubble_sort(unsorted_list)
+    print(f"After Sorting: {sorted_list[0:10]} ... {unsorted_list[-10:]}, list size: {LIST_SIZE}")
+
+    elapsed_time = timeit.timeit(lambda: bubble_sort(unsorted_list.copy()), number = ITERATIONS)
+    print(f"Average elapsed time: {elapsed_time / ITERATIONS:.6f} seconds")
 
 def bubble_sort(numbers):
     for j in range(len(numbers) - 1):
@@ -11,15 +23,7 @@ def bubble_sort(numbers):
                 temp = numbers[i]
                 numbers[i] = numbers[i+1]
                 numbers[i+1] = temp
-    
     return numbers
 
-def benchmark(sort_function):
-    start = time.time()
-    sort_function(numbers)
-    end = time.time()
-    time_taken = end - start
-    print(f"Time elapsed: {time_taken:.6f}")
-
-for i in range(10):
-    benchmark(bubble_sort) 
+if __name__ == "__main__":
+    main()

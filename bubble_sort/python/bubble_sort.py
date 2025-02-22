@@ -17,14 +17,14 @@ def main():
     elapsed_time = timeit.timeit(lambda: bubble_sort(unsorted_list.copy()), number = ITERATIONS)
     print(f"Average elapsed time: {elapsed_time / ITERATIONS:.7f} seconds")
 
-def bubble_sort(numbers):
-    for j in range(len(numbers) - 1):
-        for i in range(len(numbers) - 1):
-            if numbers[i] > numbers[i+1]:
-                temp = numbers[i]
-                numbers[i] = numbers[i+1]
-                numbers[i+1] = temp
-    return numbers
+def bubble_sort(list):
+    for j in range(len(list) - 1):
+        for i in range(len(list) - 1):
+            if list[i] > list[i+1]:
+                temp = list[i]
+                list[i] = list[i+1]
+                list[i+1] = temp
+    return list
 
 if __name__ == "__main__":
     main()

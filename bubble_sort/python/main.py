@@ -15,7 +15,7 @@ def main():
     print(f"After Sorting: {sorted_list[0:10]} ... {unsorted_list[-10:]}")
 
     elapsed_time = timeit.timeit(lambda: bubble_sort(unsorted_list.copy()), number = ITERATIONS)
-    print(f"Average elapsed time: {elapsed_time / ITERATIONS:.6f} seconds")
+    print(f"Average elapsed time: {elapsed_time / ITERATIONS:.7f} seconds")
 
 def bubble_sort(numbers):
     for j in range(len(numbers) - 1):

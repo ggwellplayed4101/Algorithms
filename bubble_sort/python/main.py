@@ -5,13 +5,14 @@ LIST_SIZE = 1000
 ITERATIONS = 10
 
 def main():
-    print("This is a bubble_sort")
+    print("This is a Bubble Sort")
 
     unsorted_list = [random.randint(0, 10000) for _ in range(LIST_SIZE)]
 
-    print(f"Before Sorting: {unsorted_list[0:10]} ... {unsorted_list[-10:]},  list size: {LIST_SIZE}")
+    print(f"The soze of the list is {LIST_SIZE}")
+    print(f"Before Sorting: {unsorted_list[0:10]} ... {unsorted_list[-10:]}")
     sorted_list = bubble_sort(unsorted_list)
-    print(f"After Sorting: {sorted_list[0:10]} ... {unsorted_list[-10:]}, list size: {LIST_SIZE}")
+    print(f"After Sorting: {sorted_list[0:10]} ... {unsorted_list[-10:]}")
 
     elapsed_time = timeit.timeit(lambda: bubble_sort(unsorted_list.copy()), number = ITERATIONS)
     print(f"Average elapsed time: {elapsed_time / ITERATIONS:.6f} seconds")

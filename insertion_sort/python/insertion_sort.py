@@ -21,7 +21,7 @@ def insertion_sort(list):
         j = i -1
         temp = list[i]
 
-        if temp < list[j] and j>=0:
+        while temp < list[j] and j>=0:
             list[j+1] = list[j]
             j -= 1
         

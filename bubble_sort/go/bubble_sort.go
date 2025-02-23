@@ -27,18 +27,18 @@ func main() {
 
 }
 
-func bubble_sort(numbers []int) []int {
-	length := len(numbers)
+func bubble_sort(list []int) []int {
+	length := len(list)
 	for i := 0; i < length-1; i++ {
 		for j := 0; j < length-1-i; j++ {
-			if numbers[j] > numbers[j+1] {
-				var temp int = numbers[j+1]
-				numbers[j+1] = numbers[j]
-				numbers[j] = temp
+			if list[j] > list[j+1] {
+				var temp int = list[j+1]
+				list[j+1] = list[j]
+				list[j] = temp
 			}
 		}
 	}
-	return numbers
+	return list
 
 }
 

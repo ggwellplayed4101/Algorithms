@@ -9,7 +9,7 @@ def main():
 
     unsorted_list = [random.randint(0, 10000) for _ in range(LIST_SIZE)]
 
-    print(f"The soze of the list is {LIST_SIZE}")
+    print(f"The size of the list is {LIST_SIZE}")
     print(f"Before Sorting: {unsorted_list[0:10]} ... {unsorted_list[-10:]}")
     sorted_list = bubble_sort(unsorted_list)
     print(f"After Sorting: {sorted_list[0:10]} ... {unsorted_list[-10:]}")

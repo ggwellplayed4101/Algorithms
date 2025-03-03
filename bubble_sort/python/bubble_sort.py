@@ -1,5 +1,4 @@
-import timeit
-import random
+import timeit, random
 
 LIST_SIZE = 1000
 ITERATIONS = 10

@@ -13,7 +13,7 @@ const size int = 1000
 var unsorted_list []int = random_arr(size)
 
 func main() {
-	fmt.Println("This is a Bubble Sort")
+	fmt.Println("This is a Insetion Sort")
 
 	fmt.Println("The size of the list is", size)
 	fmt.Println("Before Sorting:", unsorted_list[0:10], "...", unsorted_list[size-10:])
@@ -29,7 +29,7 @@ func main() {
 
 func insertion_sort(list []int) []int {
 	length := len(list)
-	for i := 1; i < length-1; i++ {
+	for i := 1; i < length; i++ {
 		j := i - 1
 		temp := list[i]
 

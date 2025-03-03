@@ -1,4 +1,4 @@
-import random, timeit
+import random, time
 
 LIST_SIZE = 1000
 ITERATIONS = 10
@@ -10,10 +10,14 @@ def main():
 
     print(f"The size of the list is {LIST_SIZE}")
     print(f"Before Sorting: {unsorted_list[0:10]} ... {unsorted_list[-10:]}")
-    sorted_list = insertion_sort(unsorted_list)
-    print(f"After Sorting: {sorted_list[0:10]} ... {unsorted_list[-10:]}")
 
-    elapsed_time = timeit.timeit(lambda: insertion_sort(unsorted_list.copy()), number = ITERATIONS)
+    start = time.time()
+    sorted_list = insertion_sort(unsorted_list)
+    end = time.time()
+
+    elapsed_time = end - start
+
+    print(f"After Sorting: {sorted_list[0:10]} ... {unsorted_list[-10:]}")
     print(f"Average elapsed time: {elapsed_time / ITERATIONS:.7f} seconds")
 
 def insertion_sort(list):

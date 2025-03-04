@@ -1,13 +1,13 @@
 import time, sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
-from list_generator import list_generator
+from list_generator import list_generator, print_list_details
 
 def main():
     unsorted_list = list_generator()
 
-    start = time.time()
+    start = time.perf_counter()
     sorted_list = shell_sort(unsorted_list)
-    end = time.time()
+    end = time.perf_counter()
 
     elapsed_time = end - start
 

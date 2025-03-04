@@ -5,9 +5,9 @@ from list_generator import list_generator
 def main():
     unsorted_list = list_generator()
 
-    start = time.time()
+    start = time.perf_counter()
     sorted_list = bubble_sort(unsorted_list)
-    end = time.time()
+    end = time.perf_counter()
 
     elapsed_time = end - start
 

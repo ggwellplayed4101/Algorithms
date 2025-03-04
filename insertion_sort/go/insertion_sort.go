@@ -11,9 +11,11 @@ const size int = 1000
 
 func main() {
 	unsorted_list := utils.Random_Arr(size)
+
 	start := time.Now()
 	insertion_sort(unsorted_list)
 	elapsed := time.Since(start).Seconds()
+
 	fmt.Println("Time taken by insertion sort:", elapsed, "seconds")
 }
 

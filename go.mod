@@ -1,3 +1,3 @@
-module github.com/ggwellplayed4101/Algorithms/bubble_sort/go
+module github.com/ggwellplayed4101/Algorithms
 
 go 1.20

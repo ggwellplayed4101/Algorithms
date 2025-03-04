@@ -1,7 +1,6 @@
 import time
 from list_generator import list_generator
 
-
 def main():
     unsorted_list = list_generator()
 

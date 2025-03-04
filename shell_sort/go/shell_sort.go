@@ -7,7 +7,7 @@ import (
 	utils "github.com/ggwellplayed4101/Algorithms/list_generator"
 )
 
-const size int = 1000
+const size int = 100000
 
 func main() {
 	unsorted_list := utils.Random_Arr(size)

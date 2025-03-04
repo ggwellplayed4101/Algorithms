@@ -1,15 +1,9 @@
-import time, random
+import time
+from list_generator import list_generator
 
-LIST_SIZE = 1000
-ITERATIONS = 10
 
 def main():
-    print("This is a Bubble Sort")
-
-    unsorted_list = [random.randint(0, 10000) for _ in range(LIST_SIZE)]
-
-    print(f"The size of the list is {LIST_SIZE}")
-    print(f"Before Sorting: {unsorted_list[0:10]} ... {unsorted_list[-10:]}")
+    unsorted_list = list_generator()
 
     start = time.time()
     sorted_list = bubble_sort(unsorted_list)
@@ -17,8 +11,7 @@ def main():
 
     elapsed_time = end - start
 
-    print(f"After Sorting: {sorted_list[0:10]} ... {unsorted_list[-10:]}")
-    print(f"Average elapsed time: {elapsed_time / ITERATIONS:.7f} seconds")
+    print(f"Time taken by bubble_sort: {elapsed_time:.7f} seconds")
 
 def bubble_sort(list):
     for j in range(len(list) - 1):

@@ -1,4 +1,5 @@
-import time
+import time, os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 from list_generator import list_generator
 
 def main():
